@@ -1,1 +1,90 @@
 # Chapter 1: Crash Course of React
+In this chapter, we will build a tic-tac-toe application in order to learn the React basic by getting our hands dirty to learn from implementing. The exercise assume you have some understanding of Javascript, HTML components, and have never done any exercise in React, and we will go over step-by-step how to set up and build the application. The goal is to follow the instruction from the <a href="https://reactjs.org/">React official site</a> and learn from it.
+
+## How to Set Up an React Application
+Once you have installed <a href="https://nodejs.org/en/">Node.js</a>, change your directory to where you want to save the project folder. Let's assume we will save the project folder on desktop and run these command:
+<br>
+
+```
+# Initialize the project
+npx create-react-app my-app
+
+# Delete the scripts in the src folder
+cd my-app
+cd src
+rm -f *
+# Change directory back to the project folder 
+cd ..
+```
+<br>
+Then, add <b>index.css</b> with this <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0100">CSS code</a> and <b>index.js</b> in the <b>src</b> folder. In the index.js file, copy and paste the following lines to the top, and paste the script from this <a href="https://codepen.io/gaearon/pen/oWWQNa?editors=0010">link</a>.
+<br>
+
+```
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+```
+
+<br>
+In this repository, we will only save the script in the src folder.
+<br><br>
+Once it is done, we can run this on port 7761:
+<br>
+
+```
+npm start --port 
+```
+
+<br>
+And there should be a browser opened, and redirect to <i>localhost:7761</i>
+
+## Some Basics about React
+React is a declarative Javascript library for building user interfaces. React allows you to build complex UI using <i>components</i> like Lego blocks.
+<br><br>
+Let's start with <i>React.Component</i>, it is a component to tell React what we want to see on the screen. It takes <b>props</b> (Short for properties), and return a hierarchy of views to display via the <i>render()</i> method, which returns a React element. An example looks like this:
+<br>
+```
+class ShoppingList extends React.Component {
+  render() {
+    return (
+      <div className="shopping-list">
+        <h1>Shopping List for {this.props.name}</h1>
+        <ul>
+          <li>Apple</li>
+          <li>Orange</li>
+          <li>Strawberry</li>
+        </ul>
+      </div>
+    );
+  }
+}
+```
+
+<br>
+Alternatively, you may use the following syntax:
+<br>
+
+```
+return React.createElement('div', {className: 'shopping-list'},
+  React.createElement('h1', {}, Shopping List for, props.name),
+  React.createElement('ul', 
+  	{},
+  	React.createElement('li',{},'Apple'),
+  	React.createElement('li',{},'Orange'),
+  	React.createElement('li',{},'Strawberry')
+  )
+);
+```
+
+## Building the Application
+In the starter coder, there are 3 React components:
+<ul>
+	<li>Square</li>
+	<li>Board</li>
+	<li>Game</li>
+</ul>
+<br>
+The Square component renders a single <i>button</i> and the Board renders 9 squares. The Game component renders a board with placeholder values.
+<br><br>
+Coming soon...
