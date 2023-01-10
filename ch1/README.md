@@ -1,5 +1,7 @@
 # Chapter 1: Crash Course of React
 In this chapter, we will build a tic-tac-toe application in order to learn the React basic by getting our hands dirty to learn from implementing. The exercise assume you have some understanding of Javascript, HTML components, and have never done any exercise in React, and we will go over step-by-step how to set up and build the application. The goal is to follow the instruction from the <a href="https://reactjs.org/">React official site</a> and learn from it.
+<br><br>
+Only relevant files are available in this folder. If you want to run the application, initialize the React project and replace the files available in this folder with the files in the React project folder.
 
 ## How to Set Up an React Application
 Once you have installed <a href="https://nodejs.org/en/">Node.js</a>, change your directory to where you want to save the project folder. Let's assume we will save the project folder on desktop and run these command:
@@ -33,10 +35,19 @@ Once it is done, we can run this on port 7761:
 <br>
 
 ```
-npm start --port 
+npm start --port 7761
+```
+<br>
+If it does not work, change the parameter in <i>package.json</i>. Under <i>scripts</i>, update the <i>start</i> key from <i>react-scripts start</i> to <i>PORT=7761 react-scripts start</i> like below:
+
+```
+scripts:{
+  "start": "PORT=7761 react-scripts start",
+  ...
+}
 ```
 
-<br>
+<br><br>
 And there should be a browser opened, and redirect to <i>localhost:7761</i>
 
 ## Some Basics about React
