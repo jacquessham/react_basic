@@ -89,6 +89,7 @@ return React.createElement('div', {className: 'shopping-list'},
 ```
 
 ## Building the Application
+### Create a Basic Game
 In the starter coder, there are 3 React components:
 <ul>
 	<li>Square</li>
@@ -98,4 +99,15 @@ In the starter coder, there are 3 React components:
 <br>
 The Square component renders a single <i>button</i> and the Board renders 9 squares. The Game component renders a board with placeholder values.
 <br><br>
+In the first approach, we will use a constructor class to initialize the state in Square. Then, in the render() function, we will add a onClick function to set the state after the user has clicked, and return the current state value. Once it is done, we are able to click on the square and display 'X'.
+<br><br>
+However, each Square component maintains its state and we need to have each squares in one location, ie, Board, we will need to declare a constructor in the Board class with an array of squares, replace the Square render function to the current state, and add a handleClick function on onClick function in Square render function. Then, replace Square as a function rather than class due to syntax simplicity as function only contain a render method and don't have their own state.
+<br><br>
+We will add an additonal instance in Board to keep track who takes the turn by adding <i>xIsNext</i>, as well as updating the handleClick function to alternative the turns.
+<br><br>
+To deterine a winner, we will add a function to check the array values and update the Board render function in order to trigger the function to check for winner. 
+<br><br>
+Now, we have just created a basic tic-tac-toe!
+
+### Finalize with Better Features
 Coming soon...
