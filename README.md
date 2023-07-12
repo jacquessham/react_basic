@@ -5,10 +5,13 @@ Repository to store the scripts when I learn React. The goal is to learn the bsa
 Below is the goals for myself to learn the programming language:
 <ul>
 	<li>By March, 2023: Complete Chapter 1-3</li>
-	<li>After March, 2023: Start learning GoodData.UI</li>
+	<li>~~After March, 2023: Start learning GoodData.UI~~ (Postponed)</li>
 </ul>
 <br>
 The learning is ongoing that the goals are subjected to add more or change.
+
+<br><br>
+<b>Learning GoodData.UI is not a priority for me anymore, the goals of learning React will be postponed until the needs to pick up again in the future</b>
 
 ## Chapter 1: Crash Course of React
 In this chapter, we will build a tic-tac-toe application in order to learn the React basic by getting our hands dirty to learn from implementing. You may find the notes from this <a href="https://github.com/jacquessham/react_basic/tree/main/ch1">Chapter 1 folder</a>. The instruction may be found in this <a href="https://reactjs.org/tutorial/tutorial.html">page</a>.
